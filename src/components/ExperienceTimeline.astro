@@ -38,21 +38,21 @@ const languages = [
 <section id="experiencia" class="py-20">
   <div class="grid md:grid-cols-3 gap-12">
     <div class="md:col-span-2">
-      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-slate-100">
-        <span class="text-cyan-500">01.</span> Experiencia Profesional
+      <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-[#e5e5e5]">
+        <span class="text-[#737373]">01.</span> Experiencia Profesional
       </h2>
       
       <div class="space-y-12">
         {experiences.map((exp) => (
-          <div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-slate-800 group hover:before:bg-cyan-500 transition-colors">
-            <div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-slate-800 group-hover:bg-cyan-500 transition-colors"></div>
+          <div class="relative pl-8 before:absolute before:left-0 before:top-0 before:bottom-0 before:w-px before:bg-[#171717] group">
+            <div class="absolute left-[-4px] top-0 w-2 h-2 rounded-full bg-[#262626] group-hover:bg-cyan-500 transition-colors duration-500"></div>
             <div class="flex flex-col md:flex-row md:items-baseline justify-between mb-2">
-              <h3 class="text-xl font-semibold text-slate-200 group-hover:text-slate-100 transition-colors">
-                {exp.title} <span class="text-slate-500 font-normal">@ {exp.company}</span>
+              <h3 class="text-xl font-semibold text-[#d4d4d4] group-hover:text-[#e5e5e5] transition-colors">
+                {exp.title} <span class="text-[#525252] font-normal">@ {exp.company}</span>
               </h3>
-              <span class="text-sm font-medium text-slate-500">{exp.period}</span>
+              <span class="text-sm font-medium text-[#525252]">{exp.period}</span>
             </div>
-            <p class="text-slate-400 leading-relaxed max-w-2xl italic">
+            <p class="text-[#a3a3a3] leading-relaxed max-w-2xl italic text-sm">
               {exp.description}
             </p>
           </div>
@@ -62,28 +62,28 @@ const languages = [
 
     <div class="space-y-12">
       <div>
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-4 text-slate-100">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-4 text-[#e5e5e5]">
           Educación
         </h2>
         {education.map((edu) => (
           <div class="mb-6 group">
-            <h4 class="text-slate-200 font-semibold group-hover:text-slate-100 transition-colors">{edu.title}</h4>
-            <p class="text-sm text-cyan-500 mb-2 font-medium">{edu.institution}</p>
-            <p class="text-sm text-slate-500 mb-2">{edu.period}</p>
-            <p class="text-sm text-slate-400 leading-relaxed italic">{edu.description}</p>
+            <h4 class="text-[#d4d4d4] font-semibold">{edu.title}</h4>
+            <p class="text-sm text-[#737373] mb-2">{edu.institution}</p>
+            <p class="text-sm text-[#525252] mb-2">{edu.period}</p>
+            <p class="text-sm text-[#737373] leading-relaxed italic">{edu.description}</p>
           </div>
         ))}
       </div>
 
       <div>
-        <h2 class="text-2xl font-bold mb-8 flex items-center gap-4 text-slate-100">
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-4 text-[#e5e5e5]">
           Idiomas
         </h2>
         <div class="space-y-4">
           {languages.map((lang) => (
-            <div class="flex items-center justify-between group border-b border-slate-900 pb-2">
-              <span class="text-slate-400 group-hover:text-slate-300 transition-colors">{lang.name}</span>
-              <span class="text-xs font-mono px-2 py-1 bg-cyan-500/10 text-cyan-400 rounded border border-cyan-500/20 font-bold">{lang.level}</span>
+            <div class="flex items-center justify-between group border-b border-[#171717] pb-2">
+              <span class="text-[#737373] group-hover:text-[#a3a3a3] transition-colors">{lang.name}</span>
+              <span class="text-xs font-mono px-2 py-1 bg-[#171717] text-cyan-400 rounded border border-[#262626] font-bold">{lang.level}</span>
             </div>
           ))}
         </div>
