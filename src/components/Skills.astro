@@ -1,0 +1,42 @@
+---
+const skillCategories = [
+  {
+    title: "Control & Mecánica",
+    skills: ["MATLAB", "Simulink", "SolidWorks", "Control Automático", "Dinámica de Sistemas"]
+  },
+  {
+    title: "Electrónica & Hardware",
+    skills: ["Diseño de PCB", "Arduino", "ESP32", "Sistemas Embebidos", "Sensores & Actuadores"]
+  },
+  {
+    title: "Computación & Software",
+    skills: ["Python", "C++", "JavaScript", "Astro", "Arquitectura Frontend"]
+  }
+];
+---
+<section id="skills" class="py-20">
+  <h2 class="text-3xl font-bold mb-12 flex items-center gap-4 text-[var(--color-30)]">
+    <span class="opacity-50 text-xl font-mono">02.</span> Habilidades Técnicas
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    {skillCategories.map((cat, idx) => (
+      <div class={`reveal reveal-delay-${idx + 1} p-6 border border-[var(--color-30)]/10 bg-[var(--color-30)]/[0.02] rounded-xl hover:border-[var(--color-10)]/30 transition-all group`}>
+        <h3 class="text-[var(--color-10)] font-bold mb-6 flex items-center gap-3">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--color-10)] shadow-[0_0_8px_var(--color-10)]"></span>
+          {cat.title}
+        </h3>
+        <ul class="space-y-3">
+          {cat.skills.map((skill) => (
+            <li class="flex items-center text-[var(--color-30)] group-hover:text-[var(--color-30)] transition-colors text-sm">
+              <svg class="w-3 h-3 mr-2 opacity-30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" />
+              </svg>
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
